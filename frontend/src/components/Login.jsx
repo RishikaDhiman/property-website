@@ -54,7 +54,7 @@ const Login = () => {
         }
         else if(!signIn){
           console.log("signn upppppppppppppppppppppppppppppppppppppppppppppp")
-          const response = await fetch(`${process.env.BACKEND_URL}/register-user`,{
+          const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/register-user`,{
             method : "POST",
             headers : {
               "Content-Type":"application/json",

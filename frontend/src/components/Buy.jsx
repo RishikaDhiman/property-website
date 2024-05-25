@@ -9,7 +9,7 @@ const Buy = () => {
   const token = localStorage.getItem('token');
 
   const fetchData = async () => {
-    const response = await fetch(`${process.env.BACKEND_URL}/all-properties`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/all-properties`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`
@@ -35,7 +35,7 @@ const Buy = () => {
 
     // Send like/unlike request to backend
     try {
-      const response = await fetch('http://localhost:3000/like-property', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/like-property`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

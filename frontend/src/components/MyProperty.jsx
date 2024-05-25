@@ -15,7 +15,7 @@ const MyProperty = () => {
 
   const fetchData = async()=>{
 
-    const response = await fetch(`${process.env.BACKEND_URL}/my-properties/${id}`,{
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/my-properties/${id}`,{
       method : "GET",
       headers : {
         "Authorization" : `Bearer ${token}`
@@ -36,7 +36,7 @@ const MyProperty = () => {
 
   const deleteButton = async()=>{
 
-    const response = await fetch(`http://localhost:3000/my-properties/${id}`,{
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/my-properties/${id}`,{
         method : "DELETE",
         headers : {
           "Authorization" : `Bearer ${token}`
