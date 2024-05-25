@@ -12,14 +12,14 @@ const secret_key = process.env.SECRET_KEY;
 require("./db/conn");
 
 
-// let corsOptions = {
-//     orgin : "http://localhost:3001",
-//     methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
-//     credentials : true,
-// }
+let corsOptions = {
+    orgin : process.env.FRONTEND_URL,
+    methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
+    credentials : true,
+}
 
 // handlings cors
-app.use(cors());
+app.use(cors(corsOptions));
 
 // used to convert incoming request object to json object.
 app.use(express.json());
