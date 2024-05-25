@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Login {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.981) 100%
+    ),
+    url("https://static.wixstatic.com/media/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_1899,h_815,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.login-box {
+  padding: 30px 50px;
+  width: 300px;
+  /* border: 1px solid white; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  background-color: rgba(0, 0, 0, 0.742);
+  border-radius: 5px;
+}
+
+.login-small-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+}
+.login-small-box > input {
+  padding: 15px 10px;
+  background-color: rgba(31, 29, 29, 0.8);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+.login-box > button {
+  border-radius: 4px;
+  padding: 15px 0px;
+  font-size: 18px;
+  background-color: rgb(208, 81, 102);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.login-box > button:hover {
+  background-color: rgb(194, 64, 86);
+}
+
+.Header {
+    /* width: 100%; */
+    background-color: #091D35;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem 6rem;
+    /* position: fixed;
+    z-index: 99; */
+}
+
+.Header>h1{
+    color: white;
+    cursor: pointer;
+}
+
+.Header>ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.Header>ul>li>a{
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none; 
+}
+.Header>ul>li>a:hover{
+    color: rgb(194, 64, 86);
+}
+
+.Home{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.Body{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.981) 100%
+    ),
+    url("https://static.wixstatic.com/media/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_1899,h_815,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Body-content{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.Body-content>h1{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.Body-content>h2{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+button{
+  border-radius: 4px;
+  /* padding: 15px 0px; */
+  font-size: 18px;
+  background-color: rgb(208, 81, 102);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+button:hover{
+  background-color: rgb(194, 64, 86);
+}
+
+.Body-content button{
+  font-size: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.BuyOrSale{
+  margin: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.BuyOrSale>h1{
+  font-weight: 200;
+  text-align: center;
+}
+
+.BuyOrSale-Container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.buy-box{
+  width: 40rem;
+  height: 25rem;
+  background-image: linear-gradient(rgba(9, 29, 53, 0.8), rgba(9, 29, 53, 0.8)),
+    url("https://static.wixstatic.com/media/82fcd3_48d7bda4accf4beea4cad4e58588a4c6~mv2_d_3000_2002_s_2.jpg/v1/fill/w_848,h_559,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_48d7bda4accf4beea4cad4e58588a4c6~mv2_d_3000_2002_s_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale-box{
+  width: 40rem;
+  background-image: linear-gradient(rgba(208, 81, 102, 0.716), rgba(208, 81, 102, 0.656)),
+    url("https://static.wixstatic.com/media/82fcd3_5a0a204eb6d04dd7b6e8685c35d8691b~mv2_d_3000_2000_s_2.jpg/v1/fill/w_851,h_559,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_5a0a204eb6d04dd7b6e8685c35d8691b~mv2_d_3000_2000_s_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BuyOrSale-Container h1 a{
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Sale{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.981) 100%
+    ),
+    url("https://static.wixstatic.com/media/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_1899,h_815,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/82fcd3_1dcc53b4e88842c7816a8251e1102530~mv2_d_4896_3264_s_4_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.sale-container{
+  margin: 2rem 30rem;
+  background-color: rgba(0, 0, 0, 0.848);
+  border-radius: 5px;
+  color: white;
+  padding: 2rem 0rem;
+}
+
+.sale-form-box{
+  display: flex;
+  column-gap: 2rem;
+  justify-content: space-between;
+}
+
+.sale-form-box>input{
+  width: 100%;
+}
+
+.sale-container >h1,h2{
+  text-align: center;
+  
+}
+
+.sale-container>h2{
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 2rem;
+}
+
+.sale-container>form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  margin: 0rem 3rem;
+}
+
+.sale-container>form input{
+  padding: 15px 10px;
+  background-color: rgba(18, 17, 17, 0.751);
+  color:white;
+  border: none;
+  outline:none;
+  border-radius: 4px;
+}
+
+.sale-container>form button{
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.buy-container{
+  margin: 2rem 6rem;
+}
+
+.buy-container h1{
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.All-properties{
+  margin: 2rem 0rem;
+  /* padding: 1rem 0rem; */
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.house-card{
+  width: 20rem;
+  /* border: 1px solid black; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #b2caed1e;
+  padding: 1rem;
+  border-radius: 5px ;
+}
+
+.house-card:hover {
+  transform: scale(1.02); 
+}
+
+.house-card>img{
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: center;
+  border-radius: 5px ;
+}
+
+.house-details1AndIcon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.house-details1AndIcon{
+  padding: 0 1rem;
+}
+
+.house-details1AndIcon>i{
+  font-size: large;
+}
+
+.house-details-1{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.house-details-1>h3,h5{
+  font-weight: 400;
+}
+.house-details-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* gap: 1.5rem; */
+  align-content: center;
+  padding: 0 1rem;
+}
+.inner-house-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.house-card>a{
+  padding: 0 1rem;
+  color: black;
+}
+.house-card>a>i{
+  margin-right: 2px;
+  font-size: 12px;
+}
+
+.Property{
+  margin: 3.5rem 20rem;
+  /* border: 1px solid black; */
+  /* overflow-x: hidden; */
+  background-color: #7c9bcb1e;
+  padding: 2rem;
+  /* width: 100%; */
+}
+.property_details {
+  width: 100%;
+}
+.property_details{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.property-details-1{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 1rem;
+}
+.property-details-1>h3,h5{
+  font-weight: 400;
+}
+.property-details-1>h3{
+  font-size: 22px;
+}
+.property-details-1>h5{
+  font-size: large;
+}
+.property-details-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 1rem;
+}
+.property-details-2 i{
+  font-size: larger;
+}
+.property-details-2 p{
+  font-size: larger;
+}
+.property-price{
+  padding: 0 1rem;
+}
+.property-price>h3{
+  font-size: larger;
+  font-weight: 500;
+}
+.owner-info{
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* margin-bottom: 4rem; */
+}
+.owner-info>h1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.owner-details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.owner-details>p{
+  font-size: larger;
+  font-weight: 500;
+}
+.intersted-btn{
+  margin-bottom: 1rem;
+}
+.intersted-btn>p{
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: large;
+}
+.intersted-btn>button{
+  padding: 5px 20px;
+}
+
+.MyProperty{
+  margin: 2rem 6rem;
+}
+
+.MyProperty h1{
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.editAndDelete{
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editAndDelete>button{
+  padding: 5px 20px;
+}
+.marginBox{
+  margin-bottom: 2rem;
+}
