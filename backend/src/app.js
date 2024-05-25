@@ -11,15 +11,15 @@ const cors = require("cors");
 const secret_key = process.env.SECRET_KEY;
 require("./db/conn");
 
-
+// process.env.FRONTEND_URL || 
 let corsOptions = {
-    orgin : process.env.FRONTEND_URL,
+    origin : "http://localhost:3001",
     methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials : true,
 }
 
 // handlings cors
-app.use(cors(corsOptions));
+app.use(cors());
 
 // used to convert incoming request object to json object.
 app.use(express.json());

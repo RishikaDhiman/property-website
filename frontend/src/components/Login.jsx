@@ -13,15 +13,19 @@ const Login = () => {
     const phone = useRef(null);
     
 
+    console.log(process.env.REACT_APP_BACKEND_URL);
+
     const navigate = useNavigate();
 
     const handleButtonClicked= async()=>{
 
         // console.log(email, password, name, phone);
 
+        
+
       try{
         if(signIn){
-          const response = await fetch(`${process.env.BACKEND_URL}/login`,{
+          const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`,{
             method : "POST",
             headers : {
               "Content-Type":"application/json"
@@ -53,7 +57,8 @@ const Login = () => {
           const response = await fetch(`${process.env.BACKEND_URL}/register-user`,{
             method : "POST",
             headers : {
-              "Content-Type":"application/json"
+              "Content-Type":"application/json",
+              
             },
             body : JSON.stringify({
               name : name.current.value,
