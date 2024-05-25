@@ -15,7 +15,7 @@ const MyProperty = () => {
 
   const fetchData = async()=>{
 
-    const response = await fetch(`http://localhost:3000/my-properties/${id}`,{
+    const response = await fetch(`${process.env.BACKEND_URL}/my-properties/${id}`,{
       method : "GET",
       headers : {
         "Authorization" : `Bearer ${token}`

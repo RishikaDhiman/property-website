@@ -21,8 +21,7 @@ const Login = () => {
 
       try{
         if(signIn){
-          console.log("signn innnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
-          const response = await fetch("http://localhost:3000/login",{
+          const response = await fetch(`${process.env.BACKEND_URL}/login`,{
             method : "POST",
             headers : {
               "Content-Type":"application/json"
@@ -51,7 +50,7 @@ const Login = () => {
         }
         else if(!signIn){
           console.log("signn upppppppppppppppppppppppppppppppppppppppppppppp")
-          const response = await fetch("http://localhost:3000/register-user",{
+          const response = await fetch(`${process.env.BACKEND_URL}/register-user`,{
             method : "POST",
             headers : {
               "Content-Type":"application/json"

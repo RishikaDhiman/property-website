@@ -9,7 +9,7 @@ const Sale = () => {
 
   const {id} = useParams();
 
-  const apiUrl = id ? `http://localhost:3000/my-properties/${id}` : 'http://localhost:3000/sale-property';
+  const apiUrl = id ? `${process.env.BACKEND_URL}/my-properties/${id}` : `${process.env.BACKEND_URL}/sale-property`;
   const method = id ? 'PATCH' : 'POST';
 
   const address = useRef(null);

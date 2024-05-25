@@ -12,14 +12,14 @@ const secret_key = process.env.SECRET_KEY;
 require("./db/conn");
 
 
-var corsOptions = {
-    orgin : "http://localhost:3001",
-    methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
-    credentials : true,
-}
+// let corsOptions = {
+//     orgin : "http://localhost:3001",
+//     methods : "GET, POST, PUT, DELETE, PATCH, HEAD",
+//     credentials : true,
+// }
 
 // handlings cors
-app.use(cors(corsOptions));
+app.use(cors());
 
 // used to convert incoming request object to json object.
 app.use(express.json());
@@ -145,7 +145,7 @@ app.get("/all-properties", authenticateToken, async(req,res)=>{
         console.log(allProperty)
     }
     catch(e){
-        // res.status(400).send(e);
+        res.status(400).send(e);
         console.log(e)
     }
 
@@ -165,7 +165,7 @@ app.get("/all-properties/:id", authenticateToken, async(req,res)=>{
     }
     catch(e){
         // internal server error
-        // res.status(500).send(e);
+        res.status(500).send(e);
         console.log(e)
     }
     
@@ -181,15 +181,15 @@ app.get("/all-properties/:city", authenticateToken, async(req,res)=>{
 
         if(allPropertyByCity.length==0){
             // page not found - 404
-            res.status(404).send("no property found");
+            res.status(404).json("no property found");
         }
         else{
-            res.status(201).send(allPropertyByCity);
+            res.status(201).json(allPropertyByCity);
         }
     }
     catch(e){
         // internal server error
-        res.status(500).send(e);
+        res.status(500).json(e);
     }
 
 })
@@ -239,7 +239,7 @@ app.get("/my-properties", authenticateToken, async(req,res)=>{
         console.log(myProperties);
     }
     catch(e){
-        res.status(404).send(e);
+        res.status(404).json(e);
     }
 
 })

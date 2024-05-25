@@ -12,7 +12,7 @@ const Property = () => {
 
     const token = localStorage.getItem("token")
 
-    const response = await fetch(`http://localhost:3000/all-properties/${id}`,{
+    const response = await fetch(`${process.env.BACKEND_URL}/all-properties/${id}`,{
       method : "GET",
       headers : {
         "Authorization" : `Bearer ${token}`

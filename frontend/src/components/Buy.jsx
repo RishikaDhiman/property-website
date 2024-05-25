@@ -9,7 +9,7 @@ const Buy = () => {
   const token = localStorage.getItem('token');
 
   const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/all-properties', {
+    const response = await fetch(`${process.env.BACKEND_URL}/all-properties`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`
