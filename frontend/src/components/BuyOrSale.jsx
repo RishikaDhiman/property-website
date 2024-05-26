@@ -10,7 +10,7 @@ const BuyOrSale = () => {
           <h1><Link to="/buy">BUY</Link></h1>
         </div>
         <div className='sale-box'>
-        <h1><Link to="/buy">SALE</Link></h1>
+        <h1><Link to="/buy">RENT</Link></h1>
         </div>
       </div>
     </div>
