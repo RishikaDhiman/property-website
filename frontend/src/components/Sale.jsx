@@ -67,7 +67,7 @@ const Sale = () => {
     <div className='Sale'>
         <Header/>
         <div className='sale-container'>
-        <h1>LET'S {id?"EDIT":"SALE"} YOUR PROPERTY</h1>
+        <h1>LET'S {id?"EDIT":"RENT"} YOUR PROPERTY</h1>
         <h2>ENTER DETAILS ABOUT YOUR PROPERTY</h2>
         <form onSubmit={(e)=>e.preventDefault()} className='sale-form'>
             <input type="text" placeholder='Enter Address' ref={address}></input>

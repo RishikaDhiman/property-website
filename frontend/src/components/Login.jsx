@@ -12,17 +12,11 @@ const Login = () => {
     const password = useRef(null);
     const phone = useRef(null);
     
-
-    console.log(process.env.REACT_APP_BACKEND_URL);
-
     const navigate = useNavigate();
 
     const handleButtonClicked= async()=>{
 
         // console.log(email, password, name, phone);
-
-        
-
       try{
         if(signIn){
           const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/login`,{
@@ -116,7 +110,7 @@ const Login = () => {
           </div>
           {/* {errorMessage!=null && <p style={{color: "rgb(165, 4, 4)"}}>{errorMessage}</p>} */}
           <button onClick={handleButtonClicked}>{signIn?"Sign In":"Sign Up"}</button>
-          <p onClick={handleSignInClick} style={{cursor:'pointer'}}>{signIn?"New to RealEstate ? Sign up now":"Already have a account ? Sign in now"}</p>
+          <p onClick={handleSignInClick} style={{cursor:'pointer'}}>{signIn?"New to Rentify ? Sign up now":"Already have a account ? Sign in now"}</p>
         </form>
     </div>
   )
