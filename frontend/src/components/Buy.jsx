@@ -86,7 +86,7 @@ const Buy = () => {
           )}
         </div>
       </div>
-      <Footer/>
+      { properties.length > 0 ?<Footer/> : <></>}
     </div>
   );
 };
