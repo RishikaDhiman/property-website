@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import SubHeader from './SubHeader';
+import Footer from './Footer';
 
 const MyProperties = () => {
 
@@ -26,6 +28,12 @@ const MyProperties = () => {
 
   }
 
+  const navigate = useNavigate();
+
+  const handleSaleBtn=()=>{
+    navigate("/sale");
+  }
+
 
   useEffect(()=>{
     fetchData();
@@ -35,15 +43,13 @@ const MyProperties = () => {
   return (
     <div>
       <Header/>
+      <SubHeader/>
       <div className='MyProperty'>
-        <h1>My Properties</h1>
-        <hr></hr>
-
         <div className='All-properties'>
         {
           properties.length>0 && properties.map((property)=>(
             <div className="house-card" key={property._id}>
-                <img src="https://static.wixstatic.com/media/84770f_ca6a1aafafa04284a052e09b53a0fce9~mv2_d_3456_2304_s_2.jpeg/v1/fill/w_435,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpeg"/>
+                <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?cs=srgb&dl=pexels-binyaminmellish-1396132.jpg&fm=jpg"/>
                 <div className='house-details1AndIcon'>
                   <div className="house-details-1">
                       <h3>{property.address}</h3>
@@ -80,13 +86,16 @@ const MyProperties = () => {
         }
 
         {
-          properties.length == 0 && <div><h1 style={{ fontWeight: 400 , fontSize: "3rem"}}>No properties found !!</h1></div>
+          properties.length == 0 && <div style={{ height: "10.6rem", display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+            <h1 style={{ fontWeight: 400 , fontSize: "3rem"}}>No properties found !!</h1>
+            <button style={{ padding: "8px 25px", fontSize:"20px"}} onClick={handleSaleBtn}>Sale one <i class="fa-solid fa-arrow-right" style={{  fontSize:"15px"}}></i></button>
+            </div>
         }
-      
-
       </div>
-
       </div>
+      {
+        properties.length>0 && <Footer/>
+      }
     </div>
   )
 }

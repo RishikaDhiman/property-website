@@ -5,8 +5,6 @@ import { toast } from 'react-toastify';
 
 const Sale = () => {
 
-  // const [isEditing, setIsEditing] = useState(false);
-
   const {id} = useParams();
 
   const apiUrl = id ? `${process.env.REACT_APP_BACKEND_URL}/my-properties/${id}` : `${process.env.REACT_APP_BACKEND_URL}/sale-property`;
@@ -69,7 +67,7 @@ const Sale = () => {
     <div className='Sale'>
         <Header/>
         <div className='sale-container'>
-        <h1>LET'S SALE YOUR PROPERTY</h1>
+        <h1>LET'S {id?"EDIT":"SALE"} YOUR PROPERTY</h1>
         <h2>ENTER DETAILS ABOUT YOUR PROPERTY</h2>
         <form onSubmit={(e)=>e.preventDefault()} className='sale-form'>
             <input type="text" placeholder='Enter Address' ref={address}></input>
@@ -77,7 +75,7 @@ const Sale = () => {
               <input type="text" placeholder='Enter City' ref={city}></input>
               <input type="text" placeholder='Enter State' ref={state}></input>
             </div>
-            <input type="text" placeholder='Enter Price' ref={price}></input>
+            <input type="text" placeholder='Enter Price in dollars' ref={price}></input>
             <div className="sale-form-box">
               <input type="number" placeholder='Enter no. of bedrooms' ref={bedrooms}></input>
               <input type="number" placeholder='Enter no. of bathrooms' ref={bathrooms}></input>

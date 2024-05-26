@@ -3,6 +3,7 @@ import Header from './Header'
 
 import Body from './Body'
 import BuyOrSale from './BuyOrSale'
+import Footer from './Footer'
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
       <Header/>
       <Body/>
       <BuyOrSale/>
+      <Footer/>
     </div>
   )
 }

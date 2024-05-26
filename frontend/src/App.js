@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Sale from "./components/Sale";
@@ -11,6 +11,10 @@ import MyProperty from "./components/MyProperty";
 function App() {
 
   const appRouter = createBrowserRouter([
+    {
+      path:"/",
+      element: <Login/>
+    },
     {
       path:"/",
       element:<ProtectedRoute/>,
@@ -45,10 +49,7 @@ function App() {
         }
       ]
     },
-    {
-      path:"/login",
-      element: <Login/>
-    }
+   
   ])
 
 

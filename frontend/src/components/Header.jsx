@@ -10,13 +10,13 @@ const Header = () => {
 
   return (
     <div className='Header'>
-        <h1>RealEstate Properties</h1>
+        <h1>Rentify.com</h1>
       <ul>
         <li><Link to="/homepage">Home</Link></li>
         <li><Link to="/buy">Buy</Link></li>
         <li><Link to="/sale">Sale</Link></li>
         <li><Link to="/my-properties">My Properties</Link></li>
-        <li><Link to="/login" onClick={handleSignOut}>Sign out</Link></li>
+        <li><Link to="/" onClick={handleSignOut}>Sign out</Link></li>
       </ul>
     </div>
   )

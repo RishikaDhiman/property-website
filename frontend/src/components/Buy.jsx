@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import HouseCard from './HouseCard';
+import SubHeader from './SubHeader';
+import Footer from './Footer';
 
 const Buy = () => {
   const [properties, setProperties] = useState([]);
@@ -65,9 +67,8 @@ const Buy = () => {
   return (
     <div className='Buy'>
       <Header />
+      <SubHeader/>
       <div className='buy-container'>
-        <h1>New Properties</h1>
-        <hr />
         <div className='All-properties'>
           {properties.length > 0 ? (
             properties.map((property) => (
@@ -85,6 +86,7 @@ const Buy = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -44,7 +44,7 @@ const Login = () => {
             localStorage.setItem("token", data.token);
             email.current.value = ""
             password.current.value = ""
-            toast.success("Succesfully Registered");
+            toast.success("Succesfully Logged In");
             navigate("/homepage")
           }
           else{
@@ -53,7 +53,7 @@ const Login = () => {
 
         }
         else if(!signIn){
-          console.log("signn upppppppppppppppppppppppppppppppppppppppppppppp")
+          
           const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/register-user`,{
             method : "POST",
             headers : {
@@ -78,7 +78,7 @@ const Login = () => {
             email.current.value = ""
             phone.current.value = ""
             password.current.value = ""
-            toast.success("Succesfully Logged In");
+            toast.success("Succesfully Registered");
             navigate("/homepage")
 
           }
